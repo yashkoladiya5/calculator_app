@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: MyCalculator(),
     );
   }
@@ -279,12 +280,10 @@ class _MyCalculatorState extends State<MyCalculator> {
                 width: double.infinity,
                 alignment: const Alignment(1, 1),
                 // color: Colors.blue,
-                child: Expanded(
-                  child: SingleChildScrollView(
-                    child: Text(
-                      textToDisplay,
-                      style: const TextStyle(color: Colors.white, fontSize: 50),
-                    ),
+                child: SingleChildScrollView(
+                  child: Text(
+                    textToDisplay,
+                    style: const TextStyle(color: Colors.white, fontSize: 50),
                   ),
                 ),
               ),
